@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projects | Saran Mahadev</title>
+    
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="icon" href="favicon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        body{background-color:#fdfdfd;padding:1.5em}svg{fill:currentColor}.flipPreview{-webkit-animation-name:flip;animation-name:flip;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-delay:.5s;animation-delay:.5s;-webkit-animation-timing-function:ease;animation-timing-function:ease;-webkit-animation-iteration-count:2;animation-iteration-count:2;-webkit-animation-direction:alternate;animation-direction:alternate}@-webkit-keyframes flip{from{transform:rotateY(0)}to{transform:rotateY(180deg)}}@keyframes flip{from{transform:rotateY(0)}to{transform:rotateY(180deg)}}.flip-container{width:100%;height:300px}.flip-container .card{width:100%;height:100%}.flip-container{perspective:1000px}.flip-container:hover .flip{transform:rotateY(180deg)}.flip-container .flip{width:100%;height:100%}.flip-container .flip{transition:.7s;transform-style:preserve-3d;position:relative}.flip-container .flip .flip-front{z-index:2;transform:rotateY(0)}.flip-container .flip .flip-back{transform:rotateY(180deg)}.flip-container .flip .flip-back,.flip-container .flip .flip-front{-webkit-backface-visibility:hidden;backface-visibility:hidden;position:absolute;top:0;left:0}
+    </style>
+</head>
+<body>
+    <div class="container-fluid " >
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">
+                    <a href="https://github.com/saranmahadev" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+                    </a>
+                </h1>
+                <hr>
+            </div>
+        </div>
+        
+        <div class="row" id="projects" >                                   
+        </div>
+    </div>
+    <script>            
+        fetch('https://api.github.com/users/saranmahadev/repos', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }).then(function(response) {
+            return response.json();
+        }).then(function(json) {            
+            var projects = json;
+            html_content = ''
+            json.forEach(element => {
+                if (element.description == null) {
+                    descp = ''
+                } else {
+                    descp = element.description
+                }
+                
+                project_card = `
+                    <div class="col-6 col-lg-3 mb-4">
+                    <div class="flip-container">
+                        <div class="flip flipPreview">
+                        <div class="card bg-dark text-white text-center flip-front">
+                            <div class="card-body d-flex flex-column justify-content-center">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M17.895 3.553A1.001 1.001 0 0 0 17 3H7c-.379 0-.725.214-.895.553l-4 8a1 1 0 0 0 0 .895l4 8c.17.338.516.552.895.552h10c.379 0 .725-.214.895-.553l4-8a1 1 0 0 0 0-.895l-4-7.999zM19.382 11h-7.764l-3-6h7.764l3 6zm-3 8H8.618l3-6h7.764l-3 6z"></path></svg>
+                            </p>
+                            <h4 class="card-title">`+ element.full_name.split('/')[1] +`</h4>
+                            </div>
+                        </div>
+
+                        <div class="card flip-back">    
+                            <div class="card-header bg-dark text-white">
+                                <div style="font-size: small;" class="text-sm-start">
+                                    Updated on: `+ element.updated_at.split('T')[0] +`
+                                </div>                           
+                            </div>                                          
+                            <div class="card-body d-flex flex-column justify-content-center">
+                            <h5 class="card-title"> `+ element.full_name.split('/')[1] +`</h5>
+                            <p class="card-text">
+                                `+ descp +`
+                            </p>                        
+                            <div> 
+                                <a href="`+ element.html_url +`" class="btn btn-outline-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"></path></svg>
+                                </a>
+                            </div>
+                            </div>
+                            <div class="card-footer bg-dark text-white">
+                                <div style="font-size: small;" class="text-sm-end">Languages Used: <span class="text-white">`+ element.language +`</span></div>                           
+                            </div>
+                        </div>
+                        </div>                    
+                    </div>                
+                    </div> 
+                `              
+                html_content += project_card;
+            });
+            
+            document.getElementById('projects').innerHTML = html_content;
+        });
+    </script>
+</body>
+</html>
