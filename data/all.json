@@ -1,0 +1,170 @@
+{
+    "projects": [
+        {
+            "title": "Music Player",
+            "subtitle": "DevMp3",
+            "description": "This is my <b>First Application</b> and worked on it for more than three weeks. This project is my eye opening project which lead me to the curiosity of exploring and learning more.",
+            "stacks": [
+                "Pygame", "Tkinter"
+            ] 
+        },{
+            "title": "Chat App",
+            "subtitle": "DevChat",
+            "description": "This application taught me about all the different Internet jargons and also while doing this project, I had to be patient and learn new concept of Socket Programming.",
+            "stacks": [
+                "SocketIO", "Tkinter"
+            ] 
+        },{
+            "title": "QR Code App",
+            "subtitle": "DevQR",
+            "description": "This application allows users to scan and read QR codes. The app uses the device's camera to scan the code and then decodes the information it contains, which can include links to websites, text, or other data. The app also has additional features, such as the ability to create and generate QR codes.",
+            "stacks": [
+                "Flask", "QRCodeJS"
+            ]
+        },{
+            "title": "Weather App",
+            "subtitle": "Climate Checker",
+            "description": "This application fetches the weather from the api shows the weather in the given city",
+            "stacks": [
+                "Flask", "WeatherAPI"
+            ]
+        },{
+            "title": "QR Based Attendance System",
+            "subtitle": "An Inspiration",
+            "description": "Malaysian University uses the QR Code based attendance system which inspired me to build the system and since I had the previous experience in building the DevQrCode app, I did the application comfortably and finished the full fledged prototype.",
+            "stacks": [
+                "SQLite", "Flask"
+            ]
+        },{
+            "title": "Automation Scripts",
+            "subtitle": "Automate the Boring Stuff with Python Inspiration",
+            "description": "After reading the book, I decided to automate some of the processes I do regulary and automated that such as:<br><span>organizer.py - Messy Downloads Folder Organization</span><br><span>tweeter.py - Tweets stuff</span><br><span>dailywally.py - Integrates with Google Calendar and Maintains Local Version</span><br><span>journal.py - Integrates with Tumblr and maintains my Journal</span><br><span>inspire.py - Gives a daily quote for me</span></ul>",
+            "stacks": [
+                "Tweepy", "Google API", "Tumblr API", "Quotes API"
+            ]
+        },{
+            "title": "Quotes API",
+            "subtitle": "Orchestrated API",
+            "description": "This API is built to learn about API Building using FastAPI and also different technologies like Docker and Docker Compose. This API can CRUD Quotes and has different variations.",
+            "stacks": [
+                "FastAPI", "MongoDB", "Docker", "Docker Compose"
+            ]
+        },{
+            "title": "TxTThuG",
+            "subtitle": "An Home writing software",
+            "description": "COVID-19 made us lazy and so I took the matter into my hands and this application converts the text to image where the image has the handwritten text and made us more lazier.",
+            "stacks": [
+                "PyWhatKit", "Flask"
+            ]
+        },{
+            "title": "ChocolateNFT Generator",
+            "subtitle": "An Web3 Hype Art Generator",
+            "description": "I took a part in NFT Hype in 2022 where I built a machine produces different NFTs using candies which is inexpensive solution to create art",
+            "stacks": [
+                "Flask", "Pillow", "Hashlib"
+            ]
+        },{
+            "title": "Searchitup (Not another Google)",
+            "subtitle": "Why go to the site to search",
+            "description": "This project is more of a fun way to show the understanding the working of web apps. Sometimes we have to wait for the app to load and there we have fill the search form to query the application but this is a quicker solution where enter the query and search in any platform.",
+            "stacks": [
+                "Firebase", "Flask"
+            ]
+        }, {
+            "title": "ABScraper",
+            "subtitle": "Scrapes books for me",
+            "description": "There is a site which has all the audio books and I needed all the books but I was tired of traversing the sites and so I built this scraper which identifies all the mp3 files and creates a seperate folder for the books and downloads all the files into the folder. This saved me a lot of time.",
+            "stacks": [
+                "BeautifulSoup", "Requests"
+            ]
+        },{
+            "title": "DevCommand",
+            "subtitle": "Combine Stuff",
+            "description": "Created a CLI tool to combine all my automation scripts and took all the automation into a single place.",
+            "stacks": [
+                "Termcolor", "SQLite", "Coloroma"
+            ]
+        },{
+            "title": "Notablr",
+            "subtitle": "Elon is late",
+            "description": "An initiative to combine everything into a platform. Due to the lack of knowledge and experience during the development discontinued but has lot of features like Photo Sharing and Blog Development.",
+            "stacks": [
+                "PHP", "MariaDB"
+            ]
+        },{
+            "title": "Dev Portfolio",
+            "subtitle": "My modern resume",
+            "description": "This is my modern portfolio which has all the technical information about me.",
+            "stacks": [
+                "Bootstrap 5", "HTML", "CSS", "JS"
+            ]
+        },{
+            "title": "DevOps Digest",
+            "subtitle": "An Opensource Intitative",
+            "description": "This is more of roadmap and collection of resources combined into a single repository for facilitating the upcoming DevOps Engineers.",
+            "stacks": [
+                "Docsify"
+            ]
+        },{
+            "title": "Text It Speak It",
+            "subtitle": "Text to Speech",
+            "description": "Integrates with Microsoft Speech API and converts the text to speech",
+            "stacks": [
+                "Speech Synthesis Utterance API"
+            ]
+        },{
+            "title": "Dev Maestro Blog",
+            "subtitle": "Experience It, Write It!",
+            "description": "After many trial and errors settled with Hugo to create my blog which uses very simple theme and works flawlessly where I share my experience in IT Technologies and Tools",
+            "stacks": [
+                "Hugo"
+            ]
+        },{
+            "title": "GitHub Homepage",
+            "subtitle": "An Automated ReadME",
+            "description": "This potrays all my work and gives a dynamic ReadME which uses Github Actions to generate ReadME.",
+            "stacks": [
+                "GitHub Actions"
+            ]
+        },{
+            "title": "CryptoArc",
+            "subtitle": "Predict and Make Money",
+            "description": "As different crypto projects published, me and my friend ajith developed a model which was trained on stream and also identified patterns on the flow. This project was a big challenge for both of us and we involved in lot of research to "
+        },{
+            "title": "DevReader",
+            "subtitle": "A Book Reader",
+            "description": "To read EBooks there is no best software available in the market. So I developed a application using DFlipJS and developed a library software to read books in the cloud",
+            "stacks": [
+                "DFlipJS", "Amazon S3", "Flask"
+            ]
+        },{
+            "title": "TarQ",
+            "subtitle": "Storage as a Microservice",
+            "description": "This is an academic project which has all the features of Google Drive Clone which is similar to NextCloud but uses all the latest technologies.",
+            "stacks": [
+                "Flask", "MongoDB", "NGINX", "Docker", "GCP"
+            ]
+        },{
+            "title": "VM Slack Bot",
+            "subtitle": "Bot as Interface",
+            "description": "A Bot which CRUD Virtual Machines in Microsoft Azure. This project implementation had lot of challenges to overcome but finally did the work finally.",
+            "stacks": [
+                "Slack API", "Microsoft Azure"
+            ]
+        },{
+            "title": "Cloud Resume Challenge",
+            "subtitle": "A Challenge is a disguise of fun",
+            "description": "This challenege had 16 step complexity to solve and took me nearly 25 Days to deploy the infrastructure in the AWS successfully.",
+            "stacks": [
+                "Boto3", "HTML", "CSS", "JS", "S3", "Amazon CloudFront", "DynamoDB", "Lambda", "Pytest", "GitHub Actions"
+            ]
+        },{
+            "title": "Personal Expense Tracker",
+            "subtitle": "Visibility on Expenses can be HeartBreaking",
+            "description": "An IBM guided project using IBM Cloud with team of four and we involved in intense development for four weeks and I was responsible for all the Backend Devlopment and the Infrastructure Provisioning in the IBM Cloud.",
+            "stacks": [
+                "Flask", "Docker", "Kubernetes", "IBM Cloud", "IBM DB2", "IBM Container Registry"
+            ]
+        }
+    ]
+}
